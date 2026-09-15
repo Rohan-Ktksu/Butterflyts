@@ -1,0 +1,35 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Data
+data/raw/
+data/interim/
+data/processed/
+data/external/
+
+# Models
+models/*.pkl
+models/*.joblib
+models/*.bin
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Temporary files
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
