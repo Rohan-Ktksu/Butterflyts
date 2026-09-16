@@ -119,7 +119,7 @@ for _, plane in df.iterrows():
 
 plt.title("Butterflyts - Live Aircraft Around Bengaluru Airport (VOBL)")
 
-plt.xlabel("Longitude")
+plt.xlabel("longitude")
 plt.ylabel("latitude")
 
 plt.grid(True)
