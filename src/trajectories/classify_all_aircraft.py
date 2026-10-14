@@ -194,8 +194,8 @@ latest_file = max(
     key=lambda file: file.stat().st_mtime
 )
 
-print("Reading:", latest_file)
-
+if __name__ == "__main__":
+    print("Reading:", latest_file)
 
 # Read ADS-B data
 df = pd.read_parquet(latest_file)
@@ -695,24 +695,24 @@ results_df[numeric_columns] = (
 )
 
 
-# Display summary
-print()
-print("Butterflyts all-aircraft classification")
-print()
+# Display results when this file is run directly
+if __name__ == "__main__":
 
-print(
-    results_df.to_string(
-        index=False
+    print()
+    print("Butterflyts all-aircraft classification")
+    print()
+
+    print(
+        results_df.to_string(
+            index=False
+        )
     )
-)
 
+    print()
+    print("Flight pattern summary")
 
-# Display pattern counts
-print()
-print("Flight pattern summary")
-
-print(
-    results_df["pattern"]
-    .value_counts()
-    .to_string()
-)
+    print(
+        results_df["pattern"]
+        .value_counts()
+        .to_string()
+    )
